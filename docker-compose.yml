@@ -1,0 +1,8 @@
+version: '3'
+services:
+  cloudflare-ddns:
+    build: .
+    container_name: cloudflare-ddns
+    volumes:
+      - ./cloudflare-ddns.sh:/usr/local/bin/cloudflare-ddns.sh
+    restart: unless-stopped
